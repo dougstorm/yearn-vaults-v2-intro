@@ -92,14 +92,14 @@ Transaction sent: 0xa70b90eb9a9899e8f6e709c53a436976315b4279c4b6797d0a293e169f94
 
 [`contracts/Strategy.sol`](contracts/Strategy.sol) is where you implement your own logic for your strategy. In particular:
 
-* Create a descriptive name for your strategy via `Strategy.name()`.
-* Invest your want tokens via `Strategy.adjustPosition()`.
-* Take profits and report losses via `Strategy.prepareReturn()`.
-* Unwind enough of your position to payback withdrawals via `Strategy.liquidatePosition()`.
-* Unwind all of your positions via `Strategy.exitPosition()`.
-* Fill in a way to estimate the total `want` tokens managed by the strategy via `Strategy.estimatedTotalAssets()`.
-* Migrate all the positions managed by your strategy via `Strategy.prepareMigration()`.
-* Make a list of all position tokens that should be protected against movements via `Strategy.protectedTokens()`.
+- Create a descriptive name for your strategy via `Strategy.name()`.
+- Invest your want tokens via `Strategy.adjustPosition()`.
+- Take profits and report losses via `Strategy.prepareReturn()`.
+- Unwind enough of your position to payback withdrawals via `Strategy.liquidatePosition()`.
+- Unwind all of your positions via `Strategy.exitPosition()`.
+- Fill in a way to estimate the total `want` tokens managed by the strategy via `Strategy.estimatedTotalAssets()`.
+- Migrate all the positions managed by your strategy via `Strategy.prepareMigration()`.
+- Make a list of all position tokens that should be protected against movements via `Strategy.protectedTokens()`.
 
 ## Testing
 
@@ -115,7 +115,7 @@ See the [Brownie documentation](https://eth-brownie.readthedocs.io/en/stable/tes
 
 ## Debugging Failed Transactions
 
-Use the `--interactive` flag to open a console immediatly after each failing test:
+Use the `--interactive` flag to open a console immediately after each failing test:
 
 ```
 brownie test --interactive
@@ -164,7 +164,7 @@ You will be prompted to enter your keystore password, and then the contract will
 
 ### No access to archive state errors
 
-If you are using Ganache to fork a network, then you may have issues with the blockchain archive state every 30 minutes. This is due to your node provider (i.e. Infura) only allowing free users access to 30 minutes of archive state. To solve this, upgrade to a paid plan, or simply restart your ganache instance and redploy your contracts.
+If you are using Ganache to fork a network, then you may have issues with the blockchain archive state every 30 minutes. This is due to your node provider (i.e. Infura) only allowing free users access to 30 minutes of archive state. To solve this, upgrade to a paid plan, or simply restart your ganache instance and redeploy your contracts.
 
 # Resources
 
